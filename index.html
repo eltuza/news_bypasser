@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Saltar login walls de la nacion y la voz del interior">
+    <title>Gimme the newz!</title>
+    <style>
+      * {
+        font-family: 'Open Sans', sans-serif;
+      }
+      .content {
+        display: block;
+        width: 100%;
+        height: 100%;
+        text-align:center;
+        margin-top: 50px;
+        line-height: 20px;
+        color: #888;
+      }
+
+      .boton {
+        color: #FFF;
+        display: inline-block;
+        padding: 20px 50px;
+        margin: 20px;
+        font-size: 28px;
+        border-radius: 4px;
+        text-decoration: none;
+
+      }
+      .lavoz {
+        background: #006DB2;
+      }
+
+      .nacion {
+        background: #017AA4;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="content">
+      <p>Arrastra los botones hasta la barra de bookmarks.<p>
+      <p>Cuando abras una noticia que te pida loguearte y te bloquee la noticia, apreta el bookmarklet corresponiente.</p>
+
+      <a class="boton lavoz" href="javascript:(function(){angular.element(document.querySelector('.msjWallNota')).scope().$broadcast('logged', 'LTA');})()">LaVoz</a>
+      <a class="boton nacion" href="javascript:(function(){setTimeout(function(){ document.getElementsByClassName('lnmodal')[0].remove() }, 500);})()">La Nacion</a>
+
+    </div>
+  </body>
+</html>
